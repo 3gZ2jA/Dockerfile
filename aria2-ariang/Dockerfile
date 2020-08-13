@@ -13,8 +13,8 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     echo ${TZ} > /etc/timezone && \
 	mkdir -p aria2/conf aria2/conf-temp aria2/downloads aria-ng && \
     wget --no-check-certificate https://github.com/mayswind/AriaNg/releases/download/1.1.6/AriaNg-1.1.6.zip  && \
-    unzip AriaNg-1.1.5.zip -d aria-ng && \
-	rm -rf AriaNg-1.1.5.zip && rm -rf /var/cache/apk/* && rm -rf /tmp/*
+    unzip AriaNg-1.1.6.zip -d aria-ng && \
+	rm -rf AriaNg-1.1.6.zip && rm -rf /var/cache/apk/* && rm -rf /tmp/*
 
 COPY init.sh /aria2/init.sh
 COPY conf-temp /aria2/conf-temp
